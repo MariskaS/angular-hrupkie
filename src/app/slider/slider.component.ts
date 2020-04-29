@@ -9,15 +9,15 @@ import { SwiperOptions } from 'swiper';
 export class SliderComponent implements OnInit {
   slider = [
     {
-      title: 'в чем<br>особенность<br>хрупких людей',
+      title: 'в чем<br>особенность<br>"хрупких" людей?',
       img: 'https://img.huffingtonpost.com/asset/5dcc613f1f00009304dee539.jpeg?cache=QaTFuOj2IM&ops=crop_834_777_4651_2994%2Cscalefit_720_noupscale'
     },
     {
-      title: 'такое обычное<br>действие...',
+      title: 'Даже простое<br>действие...',
       img: 'https://img.huffingtonpost.com/asset/5dcc613f1f00009304dee539.jpeg?cache=QaTFuOj2IM&ops=crop_834_777_4651_2994%2Cscalefit_720_noupscale'
     },
     {
-      title: '...как поднятие<br>чашки',
+      title: '...например, поднять<br>чашку...',
       img: 'https://img.huffingtonpost.com/asset/5dcc613f1f00009304dee539.jpeg?cache=QaTFuOj2IM&ops=crop_834_777_4651_2994%2Cscalefit_720_noupscale'
     },
     {
