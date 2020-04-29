@@ -1,0 +1,82 @@
+@import "variable-theme";
+
+$font-form-h4: 21px;
+$font-form-big: 26px;
+$font-form-h2: 36px;
+
+$font-h1-response: 5rem;
+
+$font-small: 12px;
+$font-base: 16px;
+$font-footer: 14px;
+
+$font-roboto-reg: 'Roboto', Helvetica, Arial, sans-serif;
+$font-akrobat-reg: 'Akrobat', Helvetica, Arial, sans-serif;
+$font-akrobat-bold: 'Akrobat-Bold', Helvetica, Arial, sans-serif;
+
+// Spaces.
+$space-small: 4px;
+$space-base: 16px;
+$space-base-half: $space-base/2;
+$space-base-double: $space-base*2;
+
+// Screens.
+$screen-sm: 768px;
+$screen-md: 980px;
+$screen-lg: 1220px;
+
+// Buttons.
+$btn-spaces-big: 2px 42px;
+$btn-size-big: 60px;
+$btn-font-big: $font-form-big;
+
+$btn-spaces: 2px 20px;
+$btn-size: 40px;
+$btn-font: $font-base;
+$btn-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+// Z-index.
+$z-index-swiper-text: 1;
+$z-index-socials: 2;
+$z-index-swiper-btn: 1;
+
+// Checkbox.
+$checkbox-size: 16px;
+$checkbox-align: 0;
+$checkbox-align-after: 1px;
+
+// Input.
+$input-height-base: 40px;
+
+// Textarea.
+$textarea-max-height: 300px;
+
+// Radio Button.
+$radio-height: 56px;
+$radio-width: 96px;
+
+// Animation.
+$transition-base: 270ms ease-in-out;
+
+// Socials.
+$soc-item-size: 48px;
+$soc-item-font: 20px;
+$soc-item-space: $space-small;
+$soc-item-shadow: $btn-shadow;
+
+// Hooter.
+$header-space: $space-base $space-base-double;
+
+// Footer.
+$footer-font-size: 14px;
+$footer-font: $font-roboto-reg;
+$footer-space: $space-base-double;
+
+// Swiper.
+$swiper-btn-size: 40px;
+$swiper-btn-space: $space-base;
+
+// Icons.
+$ico-rub-font: $font-form-big;
+$ico-rub-space: 0 $space-base 0 $space-base-half;
+

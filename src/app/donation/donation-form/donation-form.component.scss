@@ -1,0 +1,55 @@
+@import "../../../styles/buttons/button-primary";
+@import "../../../styles/icons";
+@import "../../../styles/mixins/mixin-flex";
+
+@import "../../../styles/inputs/input";
+@import "../../../styles/inputs/input-with-icon";
+@import "../../../styles/inputs/radio-btn";
+@import "../../../styles/inputs/textarea";
+@import "../../../styles/inputs/checkbox";
+
+// Sum.
+.ah-sum {
+  @include flex-align(inline-flex, flex-start, center);
+  flex-wrap: wrap;
+  font-size: $font-form-big;
+
+  > * {
+    margin: $space-base;
+  }
+
+  &__switcher {
+    @include flex-align(inline-flex, flex-start, center);
+    flex-wrap: wrap;
+  }
+}
+
+// Forms Inputs.
+.ah-form {
+  &__control {
+    padding: $space-base;
+  }
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__control {
+      flex: 50%;
+    }
+
+    .ah-width-full {
+      flex: 100%;
+    }
+  }
+
+  + [class*='ah-btn--'] {
+    margin-top: $space-small;
+  }
+}
+
+.ah-form,
+.ah-sum {
+  margin: $space-base (-$space-base);
+}

@@ -1,0 +1,15 @@
+<app-header (donateStep)="showDonate($event)"></app-header>
+<app-slider *ngIf="!isDonateStep"></app-slider>
+<!--        <a class="ah-btn&#45;&#45;primary"-->
+<!--           (click)="showDonate()"-->
+<!--           pageScroll-->
+<!--           [pageScrollDuration]="270"-->
+<!--           href="#awesomePart">Помочь сейчас</a>-->
+<!--<app-donation *ngIf="isDonateStep" id="awesomePart"></app-donation>-->
+<app-socials></app-socials>
+
+<ng-container *ngIf="isDonateStep">
+  <app-donation></app-donation>
+  <app-footer></app-footer>
+</ng-container>
+

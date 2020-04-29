@@ -1,0 +1,27 @@
+@import '../variables/variable';
+@import '../mixins/mixin-flex';
+
+/**
+* Example:
+* <div class="ah-input-with-icon">
+*    <input type="text"
+*           placeholder="...">
+*   <svg-icon class="ah-svg--rub"
+*             src="assets/sprites/sprite.svg#icon-rub"
+*             viewBox="0 0 17 20"></svg-icon>
+* </div>
+*/
+.ah-input-with-icon {
+  background-color: $color-white;
+  @include flex-align(flex, center, center);
+
+  input {
+    border: 0;
+    height: $radio-height;
+    width: $radio-width;
+    padding: $space-small 0 $space-small $space-base;
+    font-size: $font-form-big;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

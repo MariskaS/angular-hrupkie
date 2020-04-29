@@ -1,0 +1,5 @@
+@mixin button-size($height, $space, $font-size) {
+  min-height: $height;
+  padding: $space;
+  font-size: $font-size;
+}

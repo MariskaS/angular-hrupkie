@@ -1,0 +1,17 @@
+@import '../variables/variable';
+@import 'mixin-input';
+
+/**
+* Example:
+* <div class="ah-textarea">
+*    <textarea placeholder="Ваш коментарий"></textarea>
+* </div>
+*/
+.ah-textarea {
+  @include input($input-height-base, $border-control-grey, $color-primary, $color-primary);
+
+  textarea {
+    min-height: $input-height-base;
+    max-height: 200px;
+  }
+}

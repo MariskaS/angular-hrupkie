@@ -1,0 +1,9 @@
+@mixin response-font($font-size) {
+  font-size: calc(1.525rem + 3.3vw);
+
+  @media (min-width: $screen-md) {
+    & {
+      font-size: $font-size;
+    }
+  }
+}

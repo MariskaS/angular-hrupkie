@@ -1,0 +1,6 @@
+:host {
+  // Stretch the block to the full height of the browser window.
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

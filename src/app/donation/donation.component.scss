@@ -1,0 +1,65 @@
+@import "../../styles/variables/variable";
+@import "../../styles/mixins/mixin-flex";
+@import "../../styles/mixins/mixin-response-font";
+
+$info-width: 420px;
+
+:host {
+  display: block;
+
+  // Stretch the block to the full height of the browser window.
+  flex: 1;
+}
+
+.ah-donation {
+  &__info,
+  &__content {
+    padding: $space-base-double;
+  }
+
+  &__info {
+    font-size: $font-form-big;
+    font-family: $font-akrobat-bold;
+    background-color: $color-white;
+    text-transform: uppercase;
+
+    ul {
+      margin: -$space-base 0;
+
+      li {
+        padding: $space-base 0;
+
+        &:not(:first-child) {
+          border-top: 2px solid $color-primary-dark;
+        }
+      }
+    }
+  }
+
+  // For Desktop.
+  @media (min-width: $screen-md) {
+    & {
+      display: flex;
+      height: 100%;
+
+      &__info,
+      &__content {
+        padding: $space-base-double*2;
+        @include flex-align(flex, center, center);
+      }
+
+      &__content {
+        max-width: 900px;
+      }
+
+      &__info {
+        min-width: 40%;
+        font-size: $font-form-h2;
+
+        ul {
+          max-width: $info-width;
+        }
+      }
+    }
+  }
+}

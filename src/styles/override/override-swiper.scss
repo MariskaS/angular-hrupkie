@@ -1,0 +1,24 @@
+@import "../../../node_modules/swiper/swiper";
+@import "../mixins/mixin-flex";
+@import "../variables/variable";
+
+.ah-swiper {
+  height: 100%;
+  text-align: center;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    text-align: left;
+
+    .swiper {
+      &-slide {
+        overflow: hidden;
+        @include flex-align(flex, center, center);
+      }
+    }
+
+  }
+}
+
+
+

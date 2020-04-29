@@ -1,0 +1,97 @@
+@import '../mixins/mixin-flex';
+@import '../variables/variable';
+
+/**
+* Example:
+* <div class="ah-checkbox">
+*   <input type="checkbox" id="checkbox">
+*   <label for="checkbox">Checkbox</label>
+* </div>
+*/
+.ah-checkbox {
+  position: relative;
+
+  input {
+    position: absolute;
+    top: $checkbox-align;
+    left: 0;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    opacity: 0;
+    z-index: 0;
+
+    // Checked.
+    &:checked + label {
+      &:before {
+        background-color: $color-primary;
+        border-color: $color-primary;
+      }
+
+      &:after {
+        border-color: $color-white;
+      }
+    }
+  }
+
+  // Unchecked.
+  label {
+    padding: 0 0 0 $checkbox-size + $space-small;
+    cursor: pointer;
+    font-size: $font-small;
+    font-family: $font-roboto-reg;
+    color: $color-grey;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: $checkbox-align;
+      left: 0;
+      width: $checkbox-size;
+      height: $checkbox-size;
+      background-color: transparent;
+      border: $border-control-grey;
+      z-index: 1;
+
+      // If the device has :hover.
+      @media (hover: hover) {
+        & {
+          transition: all $transition-base;
+          transition-property: background-color, border-color;
+        }
+      }
+
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: $checkbox-align-after;
+      left: 5px;
+      width: 6px;
+      height: 12px;
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
+      transform: rotate(45deg);
+      z-index: 2;
+
+      // If the device has :hover.
+      @media (hover: hover) {
+        & {
+          transition: border-color $transition-base;
+        }
+      }
+
+    }
+  }
+
+  // Container for group of checkboxes.
+  &--group {
+    margin: -$space-base;
+    display: flex;
+    flex-wrap: wrap;
+
+    .ah-checkbox {
+      margin: $space-base;
+    }
+  }
+}

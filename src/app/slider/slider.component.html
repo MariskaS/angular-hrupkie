@@ -1,0 +1,34 @@
+<swiper class="ah-swiper" [config]="config">
+  <div class="swiper-wrapper">
+    <div *ngFor="let item of slider; let i = index"
+         class="swiper-slide ah-swiper__step-{{i}}">
+      <div [innerHTML]="item.title"
+           class="ah-h1 ah-anim-text"></div>
+      <div class="anim-girl-wrapper">
+        <svg-icon src="assets/icons/icon-girl.svg"
+                  class="ah-svg ah-anim-girl"
+                  [svgClass]="'ah-svg'"></svg-icon>
+        <svg-icon src="assets/icons/icon-flowers.svg"
+                  class="ah-svg ah-anim-flowers"
+                  [svgClass]="'ah-svg'"></svg-icon>
+      </div>
+
+      <svg-icon *ngIf="i === 1"
+                src="assets/icons/icon-fr_1.svg"
+                [svgClass]="'ah-anim-gap ah-svg--gap'"></svg-icon>
+      <svg-icon *ngIf="i === 2"
+                src="assets/icons/icon-fr_2.svg"
+                [svgClass]="'ah-anim-gap ah-svg--gap'"></svg-icon>
+      <svg-icon *ngIf="i === 3"
+                src="assets/icons/icon-fr_3.svg"
+                [svgClass]="'ah-anim-gap ah-svg--gap'"></svg-icon>
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-button-next">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+  <div class="swiper-button-prev">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+</swiper>

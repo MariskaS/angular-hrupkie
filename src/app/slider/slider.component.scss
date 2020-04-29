@@ -1,0 +1,85 @@
+@import "../../styles/icons";
+@import "../../styles/override/override-swiper";
+
+:host {
+  display: block;
+  padding: $space-base;
+  overflow: hidden;
+
+  // Stretch the block to the full height of the browser window.
+  flex: 1;
+}
+
+.ah-h1 {
+  margin-bottom: $space-base;
+  position: relative;
+  user-select: none;
+  z-index: $z-index-swiper-text;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*
+* Animate steps.
+*/
+.anim-girl-wrapper {
+  position: relative;
+}
+
+.ah-anim-flowers {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// Animate Step-0.
+.ah-swiper__step-0 {
+
+  .ah-anim-girl,
+  .ah-anim-flowers {
+    transition: 0.6s ease-in-out;
+  }
+
+  .ah-anim-girl {
+    transform: translateY(-200%);
+  }
+
+  .ah-anim-flowers {
+    transform: translateY(200%);
+  }
+
+  // Is Active Step.
+  &.swiper-slide-active {
+
+    .ah-anim-girl,
+    .ah-anim-flowers {
+      transform: translateY(0%);
+    }
+  }
+}
+
+// Animate for all Steps.
+.ah-anim-text {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.ah-anim-gap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.swiper-slide-active {
+  .ah-anim-gap,
+  .ah-anim-text {
+    opacity: 1;
+  }
+}

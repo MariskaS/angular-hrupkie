@@ -1,0 +1,29 @@
+<nav class="ah-page--header"
+     [class.ah-bg-primary]="isDonateStep">
+  <div class="ah-container">
+    <ul class="ah-nav">
+      <li class="ah-logo">
+        <ng-container *ngIf="isDonateStep; else donateLogo">
+          <a href="#"
+             (click)="showDonate()">Хрупкие люди</a>
+        </ng-container>
+      </li>
+      <li>
+        <a class="ah-link"
+           href="https://hrupkie.ru/"
+           target="_blank">Перейти на основной сайт</a>
+      </li>
+      <li *ngIf="!isDonateStep">
+        <a class="ah-btn--secondary"
+           (click)="showDonate()"
+           href="#">
+          Помочь сейчас
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<ng-template #donateLogo>
+  Хрупкие люди
+</ng-template>

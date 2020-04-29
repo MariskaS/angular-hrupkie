@@ -1,0 +1,70 @@
+@import "../../styles/mixins/mixin-link-variant";
+@import "../../styles/mixins/mixin-flex";
+
+.ah-footer {
+  background-color: $footer-bg;
+  color: $footer-color;
+  font-size: $footer-font-size;
+  font-family: $footer-font;
+  padding: $footer-space;
+}
+
+.ah-link {
+  @include link-variant($color-white);
+}
+
+a {
+  color: $footer-color;
+}
+
+// Socials Block.
+.ah-soc {
+  margin: 0 #{-$space-base-half};
+  display: flex;
+
+  a {
+    padding: $space-base-half;
+
+    &:active {
+      transition: color $transition-base;
+
+      &:hover {
+        color: $color-red-light;
+      }
+    }
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: color $transition-base;
+
+        &:hover {
+          color: $color-red-light;
+        }
+      }
+    }
+  }
+}
+
+// Thanks Block.
+.ah-thanks {
+  padding-top: $space-base-half;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// Contacts Block.
+.ah-contacts {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  margin: -$space-base;
+
+  &__item {
+    padding: $space-base;
+
+    li:not(:last-child) {
+      margin-bottom: $space-small;
+    }
+  }
+}

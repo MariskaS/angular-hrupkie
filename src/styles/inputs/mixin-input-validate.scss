@@ -1,0 +1,18 @@
+@mixin input-validate($text-color, $border-color) {
+  &--invalid {
+    color: $text-color;
+    position: relative;
+
+    input {
+      border-color: $border-color;
+    }
+  }
+
+  &__hint {
+    font-family: $font-roboto-reg;
+    font-size: $font-small;
+    padding-top: $space-small;
+    position: absolute;
+    top: 100%;
+  }
+}

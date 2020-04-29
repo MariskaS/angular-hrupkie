@@ -1,0 +1,13 @@
+body {
+  font-family: $font-akrobat-reg;
+  font-size: $font-base;
+  color: $color-base;
+  overflow-x: hidden;
+  line-height: 1.1;
+  background-color: $color-peach;
+}
+
+.ah-container {
+  max-width: $screen-lg;
+  margin: 0 auto;
+}

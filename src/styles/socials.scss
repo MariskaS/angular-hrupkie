@@ -1,0 +1,47 @@
+@import './mixins/mixin-flex';
+@import './variables/variable';
+
+.ah-soc {
+  @include flex-align(flex, center, center);
+  flex-direction: column;
+
+  &__item {
+    @include flex-align(flex, center, center);
+    width: $soc-item-size;
+    height: $soc-item-size;
+    font-size: $soc-item-font;
+    cursor: pointer;
+    border-radius: 100%;
+    margin: $soc-item-space;
+    color: $color-white;
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: box-shadow $transition-base;
+
+        &:hover {
+          box-shadow: $soc-item-shadow;
+        }
+      }
+    }
+  }
+}
+
+// Colors.
+.ah-facebook-f {
+  background-color: $soc-facebook;
+}
+.ah-vk {
+  background-color: $soc-vk;
+}
+.ah-twitter {
+  background-color: $soc-twitter;
+}
+.ah-odnoklassniki {
+  background-color: $soc-ok;
+}
+.ah-main {
+  background-color: $color-red-light;
+}
+

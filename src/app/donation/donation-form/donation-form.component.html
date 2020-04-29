@@ -1,0 +1,96 @@
+<form [formGroup]="donateForm"
+      (ngSubmit)="onSubmit()">
+  <p class="ah-h4">
+    Платеж с помощью банковской
+    карты или google/apple pay
+  </p>
+
+  <!--Sum-->
+  <div class="ah-sum">
+    <div class="ah-sum__switcher">
+      <ng-container *ngFor="let item of paymentSum; let idx = index">
+        <label for="opt{{idx}}"
+               class="ah-radio-btn">
+          <input type="radio"
+                 name="paymentSumRadio"
+                 formControlName="paymentSumRadio"
+                 id="opt{{idx}}"
+                 [value]="item.value"
+                 style="display: none"/>
+          <span class="ah-radio-btn__label">{{item.value}}</span>
+        </label>
+      </ng-container>
+    </div>
+    <span class="ah-h4">или</span>
+    <div class="ah-input-with-icon">
+      <input type="number"
+             formControlName="paymentSumInput"
+             placeholder="850">
+      <span class="ah-ico-rub">&#8381;</span>
+    </div>
+  </div>
+
+  <!--Forms Inputs-->
+  <div class="ah-form">
+    <div class="ah-form__control">
+
+      <div class="ah-input"
+           [ngClass]="{'ah-input--invalid': donateForm.get('name').invalid && donateForm.get('name').touched}">
+        <input placeholder="Ваше имя"
+               formControlName="name"
+               type="text">
+        <div *ngIf="donateForm.get('name').invalid && donateForm.get('name').touched"
+             class="ah-input__hint">Это поле необходимо заполнить</div>
+      </div>
+
+    </div>
+    <div class="ah-form__control">
+      <div class="ah-input"
+           [ngClass]="{'ah-input--invalid': donateForm.get('email').invalid && donateForm.get('email').touched}">
+        <input placeholder="Адрес эл. почты"
+               formControlName="email"
+               type="email">
+        <div *ngIf="donateForm.get('email').invalid && donateForm.get('email').touched"
+             class="ah-input__hint">
+          <ng-container *ngIf="donateForm.get('email').errors['required']">Адрес эл. почты не должен быть пустым.</ng-container>
+          <ng-container *ngIf="donateForm.get('email').errors['email']">Введите корректный адрес эл. почты.</ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="ah-form__control ah-width-full">
+      <div class="ah-textarea">
+        <textarea placeholder="Ваш коментарий"
+                  formControlName="comment"></textarea>
+      </div>
+    </div>
+    <div class="ah-form__control ah-width-full">
+      <div class="ah-checkbox--group">
+        <div class="ah-checkbox">
+          <input type="checkbox"
+                 formControlName="acceptContract"
+                 id="acceptContract">
+          <label for="acceptContract">
+            Я принимаю
+            <a href="https://hrupkie.ru/donation-service-terms/"
+               target="_blank">договор оферты</a>
+          </label>
+        </div>
+        <div class="ah-checkbox">
+          <input type="checkbox"
+                 formControlName="acceptAgreement"
+                 id="acceptAgreement">
+          <label for="acceptAgreement">
+            Я принимаю
+            <a href="https://hrupkie.ru/personal-data-usage-terms/"
+               target="_blank">соглашение об использовании персональных данных</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="ah-btn--primary"
+          type="submit"
+          [disabled]="donateForm.invalid || donateForm.disabled">Пожертвовать
+  </button>
+</form>

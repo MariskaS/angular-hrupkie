@@ -1,0 +1,9 @@
+@import "../../styles/socials";
+
+:host {
+  position: fixed;
+  bottom: $space-base;
+  right: $space-base;
+  z-index: $z-index-socials;
+}
+

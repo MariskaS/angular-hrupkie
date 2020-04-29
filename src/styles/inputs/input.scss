@@ -1,0 +1,18 @@
+@import '../variables/variable';
+@import 'mixin-input';
+@import 'mixin-input-validate';
+
+/**
+* Example:
+* <div class="ah-input ah-input--invalid">
+*     <input placeholder="Ваше имя"
+*           type="text">
+*    <div>Это поле необходимо заполнить</div>
+*  </div>
+*/
+.ah-input {
+  @include input($input-height-base, $border-control-grey, $color-primary, $color-primary);
+  @include input-validate($color-red, $color-red);
+}
+
+

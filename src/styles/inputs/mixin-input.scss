@@ -1,0 +1,28 @@
+@mixin input($height, $border-style, $border-color-focus, $box-shadow-color) {
+  input,
+  textarea {
+    border: none;
+    border-bottom: $border-style;
+    width: 100%;
+    padding: 10px 0;
+    font-family: $font-roboto-reg;
+    font-size: $font-base;
+    background-color: transparent;
+    height: $height;
+
+    &:focus {
+      border-color: $border-color-focus;
+    }
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+          box-shadow: 0 1px 0 0 $box-shadow-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../styles/variables/variable";
+@import "../../styles/nav";
+@import "../../styles/icons";
+@import "../../styles/buttons/button-secondary";
+@import "../../styles/mixins/mixin-link-variant";
+
+.ah-page--header {
+  padding: $header-space;
+}
+
+.ah-link {
+  @include link-variant($color-primary-dark)
+}
+
+.ah-bg-primary {
+  background-color: $header-bg;
+  color: $header-color;
+
+  a {
+    color: $header-color;
+  }
+
+  .ah-link {
+    @include link-variant($color-white);
+  }
+}

@@ -1,0 +1,37 @@
+@import "../variables/variable";
+@import "../mixins/mixin-flex";
+
+@mixin button-variant($background, $hover-background, $color) {
+  color: $color;
+  border: none;
+  background: $background;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  user-select: none;
+  @include flex-align(inline-flex, center, center);
+
+  &:not(:disabled) {
+    &:active {
+      background: $hover-background;
+    }
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: background $transition-base, box-shadow $transition-base;
+
+        &:hover {
+          background: $hover-background;
+          box-shadow: $btn-shadow;
+        }
+      }
+    }
+  }
+
+
+  &:disabled {
+    background: $color-grey;
+    cursor: default;
+  }
+}
