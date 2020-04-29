@@ -32,17 +32,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Using
-1. SVG sprite - [svg-icon-sprite](https://github.com/jannicz/svg-icon-sprite)
-    - add icon.svg to the ./src/assets/icons
-    - npm run generate:sprite
-    - html code:
-    ```angular2svg
-     <svg-icon class="ah-svg--girl"
-               src="assets/sprites/sprite.svg#icon-girl"
-               width="..."
-               height="..."
-               viewBox="0 0 580 619"></svg-icon>
-    ```
-2. Slider - [ngx-useful-swiper](https://github.com/jaychase/angular2-useful-swiper)

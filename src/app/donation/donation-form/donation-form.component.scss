@@ -10,17 +10,24 @@
 
 // Sum.
 .ah-sum {
-  @include flex-align(inline-flex, flex-start, center);
-  flex-wrap: wrap;
   font-size: $font-form-big;
+  text-align: center;
 
   > * {
     margin: $space-base;
   }
 
-  &__switcher {
-    @include flex-align(inline-flex, flex-start, center);
-    flex-wrap: wrap;
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    & {
+      @include flex-align(inline-flex, flex-start, center);
+      flex-wrap: wrap;
+
+      &__switcher {
+        @include flex-align(inline-flex, flex-start, center);
+        flex-wrap: wrap;
+      }
+    }
   }
 }
 

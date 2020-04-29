@@ -21,6 +21,7 @@ $space-base-half: $space-base/2;
 $space-base-double: $space-base*2;
 
 // Screens.
+$screen-sx: 400px;
 $screen-sm: 768px;
 $screen-md: 980px;
 $screen-lg: 1220px;
@@ -45,15 +46,21 @@ $checkbox-size: 16px;
 $checkbox-align: 0;
 $checkbox-align-after: 1px;
 
-// Input.
-$input-height-base: 40px;
-
 // Textarea.
 $textarea-max-height: 300px;
 
 // Radio Button.
 $radio-height: 56px;
 $radio-width: 96px;
+
+// Input.
+$input-height-base: 40px;
+
+$input-with-icon-height: $radio-height;
+$input-with-icon-width: $radio-width;
+$input-with-icon-font-size: $font-form-big;
+$input-with-icon-space: $space-small 0 $space-small $space-base;
+$input-with-icon-bg: $color-white;
 
 // Animation.
 $transition-base: 270ms ease-in-out;

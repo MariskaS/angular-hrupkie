@@ -16,7 +16,39 @@
         @include flex-align(flex, center, center);
       }
     }
+  }
+}
 
+[class*="swiper-button-"] {
+  display: none;
+}
+
+// For Desktop & Tablet.
+@media (min-width: $screen-sm) {
+
+  // Buttons.
+  [class*="swiper-button-"] {
+    position: absolute;
+    display: block;
+    top: 50%;
+    font-size: $swiper-btn-size;
+    z-index: $z-index-swiper-btn;
+    cursor: pointer;
+  }
+
+  .swiper-button {
+    &-prev {
+      left: $swiper-btn-space;
+    }
+
+    &-next {
+      right: $swiper-btn-space;
+    }
+
+    &-disabled {
+      opacity: .1;
+      cursor: default;
+    }
   }
 }
 

@@ -23,7 +23,7 @@
     flex: 1;
     @include flex-align(flex, center, center);
     height: $radio-height;
-    width: $radio-width;
+
     border: 1px solid $color-grey-light;
     z-index: 1;
 
@@ -61,6 +61,13 @@
         & {
           transition: transform $transition-base;
         }
+      }
+    }
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      & {
+        width: $radio-width;
       }
     }
   }
