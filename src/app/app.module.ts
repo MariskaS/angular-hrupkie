@@ -12,8 +12,6 @@ import {DonationFormComponent} from "./donation/donation-form/donation-form.comp
 import {SliderComponent} from './slider/slider.component';
 import {FooterComponent} from "./footer/footer.component";
 
-import {NgxPageScrollCoreModule} from "ngx-page-scroll-core";
-import {NgxPageScrollModule} from "ngx-page-scroll";
 import {HttpClientModule} from "@angular/common/http";
 import {AngularSvgIconModule} from "angular-svg-icon";
 
@@ -32,8 +30,6 @@ import {AngularSvgIconModule} from "angular-svg-icon";
     BrowserModule,
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     NgxUsefulSwiperModule,
-    NgxPageScrollCoreModule,
-    NgxPageScrollModule,
     ReactiveFormsModule,
     HttpClientModule, AngularSvgIconModule.forRoot()
   ],

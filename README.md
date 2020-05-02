@@ -3,7 +3,6 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
 ## Usage
-- [ngx-page-scroll](https://github.com/Nolanus/ngx-page-scroll/blob/master/README.md)
 - [ng-svg-icon-sprite](https://github.com/jannicz/ng-svg-icon-sprite)
 - [ngx-useful-swiper](https://github.com/jaychase/angular2-useful-swiper)
 - [fontawesome](https://fontawesome.com/)
