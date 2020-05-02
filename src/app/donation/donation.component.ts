@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+import {default as DonationText} from "../constants/donationText.json";
 
 @Component({
   selector: 'app-donation',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./donation.component.scss']
 })
 export class DonationComponent implements OnInit {
+  donationText = DonationText;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  isSuccessfulPayment: boolean;
+
+  successfulPaymentNotify($event: boolean) {
+    this.isSuccessfulPayment = $event;
+  }
+
+  showForm($event: boolean) {
+    this.isSuccessfulPayment = $event;
   }
 
 }

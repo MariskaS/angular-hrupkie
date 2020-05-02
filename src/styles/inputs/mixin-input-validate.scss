@@ -1,3 +1,5 @@
+@import "../mixins/mixin-hint-variant";
+
 @mixin input-validate($text-color, $border-color) {
   &--invalid {
     color: $text-color;
@@ -9,8 +11,7 @@
   }
 
   &__hint {
-    font-family: $font-roboto-reg;
-    font-size: $font-small;
+    @include hint-variant($text-color, $font-roboto-reg, $font-small);
     padding-top: $space-small;
     position: absolute;
     top: 100%;

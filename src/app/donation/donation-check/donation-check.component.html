@@ -1,4 +1,5 @@
-<div class="h1">ваше пожертвование выполнено!</div>
-<div class="h3">мы искренне благодарим вас за неравнодушие!</div>
+<div class="ah-h2">{{donationText.notifySuccess.title}}</div>
+<div class="ah-h3">{{donationText.notifySuccess.subtitle}}</div>
 
-<button class="ah-btn--primary">Повторить платеж</button>
+<button class="ah-btn--primary"
+        (click)="showDonateForm()">{{donationText.notifySuccess.button}}</button>

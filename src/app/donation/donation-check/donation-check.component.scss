@@ -1,0 +1,18 @@
+@import "../../../styles/buttons/button-primary";
+@import "../../../styles/mixins/mixin-response-font";
+
+.ah-h2,
+.ah-h3 {
+  font-family: $font-akrobat-bold;
+  text-transform: uppercase;
+}
+
+.ah-h2 {
+  font-size: $notify-title-font;
+}
+
+.ah-h3 {
+  font-size: $notify-subtitle-font;
+  margin: $space-base-double 0;
+}
+

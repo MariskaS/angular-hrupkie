@@ -27,7 +27,7 @@ $screen-md: 980px;
 $screen-lg: 1220px;
 
 // Buttons.
-$btn-spaces-big: 2px 42px;
+$btn-spaces-big: 2px 28px;
 $btn-size-big: 60px;
 $btn-font-big: $font-form-big;
 
@@ -86,4 +86,9 @@ $swiper-btn-space: $space-base;
 // Icons.
 $ico-rub-font: $font-form-big;
 $ico-rub-space: 0 $space-base 0 $space-base-half;
+
+// Notify.
+$notify-title-font: $font-form-h2;
+$notify-subtitle-font: $font-form-h4;
+
 

@@ -1,15 +1,15 @@
 <div class="ah-donation">
   <div class="ah-donation__info">
     <ul>
-      <li>50 рублей в фонд помощи хрупким</li>
-      <li>Незаметно для тебя, но огромная помощь для хрупких</li>
+      <li>{{donationText.title}}</li>
+      <li>{{donationText.subtitle}}</li>
     </ul>
   </div>
 
   <div class="ah-donation__content">
-    <app-donation-form></app-donation-form>
+    <app-donation-form *ngIf="!isSuccessfulPayment"
+                       (successfulPayment)="successfulPaymentNotify($event)"></app-donation-form>
 
-    <!--TODO: show by click - donate btn-->
-    <!--<app-donation-check></app-donation-check>-->
+    <app-donation-check *ngIf="isSuccessfulPayment" (showForm)="showForm($event)"></app-donation-check>
   </div>
 </div>

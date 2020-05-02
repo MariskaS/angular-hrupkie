@@ -4,11 +4,11 @@
       <ul class="ah-contacts__item">
         <li>
           <a class="ah-link"
-             href="tel:+79035900400"
-             rel="nofollow">+7-903-590-04-00</a></li>
+             href="tel:{{footerText.contacts.phone}}"
+             rel="nofollow">{{footerText.contacts.phone}}</a></li>
         <li>
           <a class="ah-link"
-             href="mailto:info@hrupkie.ru?subject=Mail from help.hrupkie">info@hrupkie.ru</a></li>
+             href="mailto:{{footerText.contacts.email}}?subject=Mail from {{footerText.contacts.mainSite}}">{{footerText.contacts.email}}</a></li>
         <li>
           <div class="ah-soc">
             <a *ngFor="let item of socials"
@@ -20,10 +20,10 @@
         </li>
       </ul>
       <ul class="ah-contacts__item">
-        <li>Юридический адрес: 127051, г. Москва, Цветной Бульвар, д. 2</li>
-        <li>Физический адрес: 125284, г. Москва, 1-й Боткинский пр-д, д. 7с1</li>
-        <li>Почтовый адрес: 143090, МО, г. Краснознаменск, ул. Победы, д. 15, кв.11</li>
-        <li class="ah-thanks">спасибо за помощь в разработке и дизайне сайта:</li>
+        <li>{{footerText.addresses.legal}}</li>
+        <li>{{footerText.addresses.physical}}</li>
+        <li>{{footerText.addresses.mailing}}</li>
+        <li class="ah-thanks">{{footerText.thanks.title}}</li>
         <li>
           <a class="ah-link"
              target="_blank"

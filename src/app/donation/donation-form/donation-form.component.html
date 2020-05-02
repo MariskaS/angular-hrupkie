@@ -1,19 +1,17 @@
 <form [formGroup]="donateForm"
       (ngSubmit)="onSubmit()">
-  <p class="ah-h4">
-    Платеж с помощью банковской
-    карты или google/apple pay
-  </p>
+  <p class="ah-h4">{{formText.title}}</p>
 
   <!--Sum-->
   <div class="ah-sum">
     <div class="ah-sum__switcher">
-      <ng-container *ngFor="let item of paymentSum; let idx = index">
+      <ng-container *ngFor="let item of donateSum; let idx = index">
         <label for="opt{{idx}}"
                class="ah-radio-btn">
           <input type="radio"
-                 name="paymentSumRadio"
-                 formControlName="paymentSumRadio"
+                 name="sumRadioValue"
+                 (click)="resetInputSumValue()"
+                 formControlName="sumRadioValue"
                  id="opt{{idx}}"
                  [value]="item.value"
                  style="display: none"/>
@@ -21,13 +19,16 @@
         </label>
       </ng-container>
     </div>
-    <span class="ah-h4">или</span>
+    <span class="ah-h4">{{formText.or}}</span>
     <div class="ah-input-with-icon">
       <input type="number"
-             formControlName="paymentSumInput"
+             formControlName="sumInputValue"
+             min="1"
              placeholder="850">
-      <span class="ah-ico-rub">&#8381;</span>
+      <span class="ah-ico-rub">&#x20BD;</span>
     </div>
+    <div *ngIf="!donateForm.get('sumRadioValue').value && !donateForm.get('sumInputValue').value"
+         class="ah-sum__hint">{{formText.fieldSumError}}</div>
   </div>
 
   <!--Forms Inputs-->
@@ -36,30 +37,30 @@
 
       <div class="ah-input"
            [ngClass]="{'ah-input--invalid': donateForm.get('name').invalid && donateForm.get('name').touched}">
-        <input placeholder="Ваше имя"
+        <input placeholder="{{formText.name.label}}"
                formControlName="name"
                type="text">
         <div *ngIf="donateForm.get('name').invalid && donateForm.get('name').touched"
-             class="ah-input__hint">Это поле необходимо заполнить</div>
+             class="ah-input__hint">{{formText.name.error}}</div>
       </div>
 
     </div>
     <div class="ah-form__control">
       <div class="ah-input"
            [ngClass]="{'ah-input--invalid': donateForm.get('email').invalid && donateForm.get('email').touched}">
-        <input placeholder="Адрес эл. почты"
+        <input placeholder="{{formText.email.label}}"
                formControlName="email"
                type="email">
         <div *ngIf="donateForm.get('email').invalid && donateForm.get('email').touched"
              class="ah-input__hint">
-          <ng-container *ngIf="donateForm.get('email').errors['required']">Адрес эл. почты не должен быть пустым.</ng-container>
-          <ng-container *ngIf="donateForm.get('email').errors['email']">Введите корректный адрес эл. почты.</ng-container>
+          <ng-container *ngIf="donateForm.get('email').errors['required']">{{formText.email.errorNoEmpty}}</ng-container>
+          <ng-container *ngIf="donateForm.get('email').errors['email']">{{formText.email.errorInvalid}}</ng-container>
         </div>
       </div>
     </div>
     <div class="ah-form__control ah-width-full">
       <div class="ah-textarea">
-        <textarea placeholder="Ваш коментарий"
+        <textarea placeholder="{{formText.comment.label}}"
                   formControlName="comment"></textarea>
       </div>
     </div>
@@ -70,9 +71,9 @@
                  formControlName="acceptContract"
                  id="acceptContract">
           <label for="acceptContract">
-            Я принимаю
+            {{formText.confirm.yes}}
             <a href="https://hrupkie.ru/donation-service-terms/"
-               target="_blank">договор оферты</a>
+               target="_blank">{{formText.confirm.contractOffer}}</a>
           </label>
         </div>
         <div class="ah-checkbox">
@@ -80,9 +81,9 @@
                  formControlName="acceptAgreement"
                  id="acceptAgreement">
           <label for="acceptAgreement">
-            Я принимаю
+            {{formText.confirm.yes}}
             <a href="https://hrupkie.ru/personal-data-usage-terms/"
-               target="_blank">соглашение об использовании персональных данных</a>
+               target="_blank">{{formText.confirm.personalData}}</a>
           </label>
         </div>
       </div>
@@ -91,6 +92,7 @@
 
   <button class="ah-btn--primary"
           type="submit"
-          [disabled]="donateForm.invalid || donateForm.disabled">Пожертвовать
+          [disabled]="donateForm.invalid || donateForm.disabled || (!donateForm.get('sumRadioValue').value && !donateForm.get('sumInputValue').value)">
+    {{formText.submitButton}}
   </button>
 </form>

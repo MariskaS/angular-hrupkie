@@ -5,19 +5,19 @@
       <li class="ah-logo">
         <ng-container *ngIf="isDonateStep; else donateLogo">
           <a href="#"
-             (click)="showDonate()">Хрупкие люди</a>
+             (click)="showDonate()">{{headerText.logo}}</a>
         </ng-container>
       </li>
       <li>
         <a class="ah-link"
            href="https://hrupkie.ru/"
-           target="_blank">Перейти на основной сайт</a>
+           target="_blank">{{headerText.directToMainSite}}</a>
       </li>
       <li *ngIf="!isDonateStep">
         <a class="ah-btn--secondary"
            (click)="showDonate()"
            href="#">
-          Помочь сейчас
+          {{headerText.helpButton}}
         </a>
       </li>
     </ul>
@@ -25,5 +25,5 @@
 </nav>
 
 <ng-template #donateLogo>
-  Хрупкие люди
+  {{headerText.logo}}
 </ng-template>

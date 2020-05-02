@@ -1,27 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 
+import {default as SliderText} from "../constants/sliderText.json";
+
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
+  sliderText = SliderText;
+
   slider = [
     {
-      title: 'в чем<br>особенность<br>"хрупких" людей?',
+      title: this.sliderText.slide1,
       img: 'https://img.huffingtonpost.com/asset/5dcc613f1f00009304dee539.jpeg?cache=QaTFuOj2IM&ops=crop_834_777_4651_2994%2Cscalefit_720_noupscale'
     },
     {
-      title: 'Даже простое<br>действие...',
+      title: this.sliderText.slide2,
       img: 'https://img.huffingtonpost.com/asset/5dcc613f1f00009304dee539.jpeg?cache=QaTFuOj2IM&ops=crop_834_777_4651_2994%2Cscalefit_720_noupscale'
     },
     {
-      title: '...например, поднять<br>чашку...',
+      title: this.sliderText.slide3,
       img: 'https://img.huffingtonpost.com/asset/5dcc613f1f00009304dee539.jpeg?cache=QaTFuOj2IM&ops=crop_834_777_4651_2994%2Cscalefit_720_noupscale'
     },
     {
-      title: '...может<br>привести к<br>перелому',
+      title: this.sliderText.slide4,
       img: 'https://img.huffingtonpost.com/asset/5dcc613f1f00009304dee539.jpeg?cache=QaTFuOj2IM&ops=crop_834_777_4651_2994%2Cscalefit_720_noupscale'
     }
   ]

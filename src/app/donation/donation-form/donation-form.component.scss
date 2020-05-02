@@ -1,6 +1,9 @@
-@import "../../../styles/buttons/button-primary";
-@import "../../../styles/icons";
 @import "../../../styles/mixins/mixin-flex";
+@import "../../../styles/mixins/mixin-hint-variant";
+
+@import "../../../styles/buttons/button-primary";
+
+@import "../../../styles/icons";
 
 @import "../../../styles/inputs/input";
 @import "../../../styles/inputs/input-with-icon";
@@ -12,9 +15,17 @@
 .ah-sum {
   font-size: $font-form-big;
   text-align: center;
+  position: relative;
 
-  > * {
+  > *:not([class*='__hint']) {
     margin: $space-base;
+  }
+
+  &__hint {
+    @include hint-variant($color-red, $font-roboto-reg, $font-small);
+    position: absolute;
+    top: 100%;
+    margin: $space-base-half 0 0 $space-base;
   }
 
   // For Desktop & Tablet.
