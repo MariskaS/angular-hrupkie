@@ -5,7 +5,6 @@ import {ReactiveFormsModule} from "@angular/forms";
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from "./header/header.component";
-import {SocialsComponent} from "./socials/socials.component";
 import {DonationCheckComponent} from "./donation/donation-check/donation-check.component";
 import {DonationComponent} from "./donation/donation.component";
 import {DonationFormComponent} from "./donation/donation-form/donation-form.component";
@@ -20,7 +19,6 @@ import {AngularSvgIconModule} from "angular-svg-icon";
     AppComponent,
     HeaderComponent,
     SliderComponent,
-    SocialsComponent,
     DonationCheckComponent,
     DonationComponent,
     DonationFormComponent,
