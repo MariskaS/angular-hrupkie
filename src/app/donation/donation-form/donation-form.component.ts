@@ -9,7 +9,7 @@ import {default as FormText} from "../../constants/formText.json";
   styleUrls: ['./donation-form.component.scss']
 })
 export class DonationFormComponent implements OnInit {
-  @Output() successfulPayment = new EventEmitter<boolean>();
+  @Output() checkPayment = new EventEmitter<boolean>();
   isSuccessfulPayment: boolean = false;
   donateForm: FormGroup;
   formText = FormText;
@@ -53,13 +53,12 @@ export class DonationFormComponent implements OnInit {
     this.donateForm.get('sumInputValue').valueChanges
       .subscribe(value => {
         if (parseInt(value) >= 0 && this.donateForm.get('sumRadioValue').value) {
-           this.donateForm.get('sumRadioValue').reset(null);
+          this.donateForm.get('sumRadioValue').reset(null);
         }
       });
   }
 
   onSubmit(): void {
-    this.donateForm.disable();
     this.sendDonation(this.donateForm.value);
   }
 
@@ -101,14 +100,13 @@ export class DonationFormComponent implements OnInit {
         email: accountId,
         data: data
       },
-       (options) => {
+      (options) => {
         // Success - successful payment action.
-        this.successfulPayment.emit(true);
-        console.log(options)
+        this.checkPayment.emit(true);
       },
       (reason, options) => {
         // Fail - action on unsuccessful payment.
-        console.error(reason, options)
+        console.error(reason)
       });
   }
 

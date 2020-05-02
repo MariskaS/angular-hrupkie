@@ -8,7 +8,7 @@
 
   <div class="ah-donation__content">
     <app-donation-form *ngIf="!isSuccessfulPayment"
-                       (successfulPayment)="successfulPaymentNotify($event)"></app-donation-form>
+                       (checkPayment)="successfulPaymentNotify($event)"></app-donation-form>
 
     <app-donation-check *ngIf="isSuccessfulPayment" (showForm)="showForm($event)"></app-donation-check>
   </div>

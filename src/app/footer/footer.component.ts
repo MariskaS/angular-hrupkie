@@ -13,8 +13,7 @@ export class FooterComponent implements OnInit {
   socials = [
     {icon: 'facebook-f', link: 'https://www.facebook.com/hrupkie.fond'},
     {icon: 'vk', link: 'https://vk.com/hrupkie.fond'},
-    {icon: 'twitter', link: 'http://twitter.com/share?url=http://help.hrupkie.ru/'},
-    {icon: 'odnoklassniki', link: 'https://connect.ok.ru/offer?url=http://help.hrupkie.ru'},
+    {icon: 'instagram', link: 'http://instagram.com/hrupkie.fond/'},
   ];
 
   constructor() { }
