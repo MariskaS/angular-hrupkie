@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run angular-hrupkie:serve-ssr",
     "serve:ssr": "node dist/angular-hrupkie/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-hrupkie:server:production",
+    "build:ssr": "ng build --prod && ng run angular-hrupkie:production",
     "prerender": "ng run angular-hrupkie:prerender"
   },
   "private": true,
@@ -25,7 +25,6 @@
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/platform-server": "~9.1.0",
     "@angular/router": "~9.1.0",
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "@nguniversal/express-engine": "^9.1.0",
     "angular-svg-icon": "^9.2.0",
     "express": "^4.15.2",

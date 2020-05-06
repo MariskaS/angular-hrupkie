@@ -1,5 +1,7 @@
-<app-header (donateStep)="showDonate($event)"></app-header>
-<app-slider *ngIf="!isDonateStep"></app-slider>
+<app-header (donateStep)="toggleDonateForm($event)"
+            [isDonateStep]="isDonateStep"></app-header>
+<app-slider *ngIf="!isDonateStep"
+            (donateStep)="toggleDonateForm($event)"></app-slider>
 <ng-container *ngIf="isDonateStep">
   <app-donation></app-donation>
   <app-footer></app-footer>

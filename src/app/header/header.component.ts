@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import {default as HeaderText} from "../constants/headerText.json";
 
@@ -8,8 +8,8 @@ import {default as HeaderText} from "../constants/headerText.json";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() isDonateStep: boolean = false;
   @Output() donateStep = new EventEmitter<boolean>();
-  isDonateStep: boolean = false;
 
   headerText = HeaderText;
 
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showDonate(): void {
+  toggleDonateForm(): void {
     this.isDonateStep = !this.isDonateStep;
     this.donateStep.emit(this.isDonateStep);
   }

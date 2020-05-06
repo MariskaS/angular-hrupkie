@@ -4,7 +4,7 @@ $font-form-h4: 21px;
 $font-form-big: 26px;
 $font-form-h2: 36px;
 
-$font-h1-response: 5rem;
+$font-h1-response: 4rem;
 
 $font-small: 12px;
 $font-base: 16px;
@@ -27,13 +27,13 @@ $screen-md: 980px;
 $screen-lg: 1220px;
 
 // Buttons.
-$btn-spaces-big: 2px 28px;
+$btn-spaces-big: 2px 32px;
 $btn-size-big: 60px;
 $btn-font-big: $font-form-big;
 
 $btn-spaces: 2px 20px;
 $btn-size: 40px;
-$btn-font: $font-base;
+$btn-font: 18px;
 $btn-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
 // Z-index.
@@ -71,15 +71,21 @@ $header-space: $space-base $space-base-double;
 // Footer.
 $footer-font-size: 14px;
 $footer-font: $font-roboto-reg;
-$footer-space: $space-base-double;
+// $space-base-double*2 - because socials network plugin on mobile.
+$footer-space: $space-base-double $space-base $space-base-double*2;
+$footer-space-sm: $space-base-double;
 
 // Swiper.
 $swiper-btn-size: 40px;
-$swiper-btn-space: $space-base;
+$swiper-btn-space: $space-base-double;
 
 // Icons.
-$ico-rub-font: $font-form-big;
+$ico-rub-size: 20px;
 $ico-rub-space: 0 $space-base 0 $space-base-half;
+
+$ico-soc-color: $color-white;
+$ico-soc-color-action: $color-red-light;
+$ico-soc-size: 14px;
 
 // Notify.
 $notify-title-font: $font-form-h2;

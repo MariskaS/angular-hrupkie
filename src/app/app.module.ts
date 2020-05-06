@@ -29,7 +29,8 @@ import {AngularSvgIconModule} from "angular-svg-icon";
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     NgxUsefulSwiperModule,
     ReactiveFormsModule,
-    HttpClientModule, AngularSvgIconModule.forRoot()
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

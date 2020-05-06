@@ -7,10 +7,9 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-
   isDonateStep: boolean;
 
-  showDonate($event: boolean) {
+  toggleDonateForm($event: boolean) {
     this.isDonateStep = $event;
   }
 }

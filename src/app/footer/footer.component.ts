@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
   footerText = FooterText;
 
   socials = [
-    {icon: 'facebook-f', link: 'https://www.facebook.com/hrupkie.fond'},
+    {icon: 'facebook', link: 'https://www.facebook.com/hrupkie.fond'},
     {icon: 'vk', link: 'https://vk.com/hrupkie.fond'},
     {icon: 'instagram', link: 'http://instagram.com/hrupkie.fond/'},
   ];

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { SwiperOptions } from 'swiper';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {SwiperOptions} from 'swiper';
 
 import {default as SliderText} from "../constants/sliderText.json";
 
@@ -9,6 +9,7 @@ import {default as SliderText} from "../constants/sliderText.json";
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
+  @Output() donateStep = new EventEmitter<boolean>();
   sliderText = SliderText;
 
   slider = [
@@ -38,9 +39,13 @@ export class SliderComponent implements OnInit {
     spaceBetween: 30
   };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  showDonate(): void {
+    this.donateStep.emit(true);
+  }
 }

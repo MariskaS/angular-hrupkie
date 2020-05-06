@@ -34,6 +34,7 @@ export class DonationFormComponent implements OnInit {
       comment: new FormControl(null),
       acceptContract: new FormControl(null, [Validators.required]),
       acceptAgreement: new FormControl(null, [Validators.required]),
+      autoPay: new FormControl(null, []),
     })
 
     this.resetRadioSumValue();
@@ -74,7 +75,9 @@ export class DonationFormComponent implements OnInit {
       name: formData.name
     } as any;
 
-    const auto = false;
+    const auto = this.donateForm.get('autoPay').value === true;
+
+    console.log(auto)
 
     // Unable subscription.
     if (auto) {
@@ -90,7 +93,7 @@ export class DonationFormComponent implements OnInit {
     widget.charge({
 
         // Id from your personal account
-        publicId: 'test_api_00000000000000000000002',
+        publicId: 'pk_7d7b512c772196b547db947353a37',
         description: formData.comment,
         amount: amount,
         currency: 'RUB',

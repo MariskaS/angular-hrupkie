@@ -24,7 +24,8 @@
       <input type="number"
              formControlName="sumInputValue"
              min="1">
-      <span class="ah-ico-rub">&#x20BD;</span>
+      <svg-icon src="assets/icons/icon-rub.svg"
+                class="ah-svg-rub"></svg-icon>
     </div>
     <div *ngIf="!donateForm.get('sumRadioValue').value && !donateForm.get('sumInputValue').value"
          class="ah-sum__hint">{{formText.fieldSumError}}</div>
@@ -83,6 +84,14 @@
             {{formText.confirm.yes}}
             <a href="https://hrupkie.ru/personal-data-usage-terms/"
                target="_blank">{{formText.confirm.personalData}}</a>
+          </label>
+        </div>
+        <div class="ah-checkbox">
+          <input type="checkbox"
+                 formControlName="autoPay"
+                 id="autoPay">
+          <label for="autoPay">
+            Помогать ежемесячно
           </label>
         </div>
       </div>

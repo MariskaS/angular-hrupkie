@@ -14,7 +14,8 @@
             <a *ngFor="let item of socials"
                target="_blank"
                href="{{item.link}}">
-              <i class="fab fa-{{item.icon}}"></i>
+              <svg-icon src="assets/icons/icon-{{item.icon}}.svg"
+                        class="ah-soc__svg"></svg-icon>
             </a>
           </div>
         </li>
@@ -37,6 +38,18 @@
           <a class="ah-link"
              target="_blank"
              href="https://vk.com/serednitsky.nick">serednitskyNick</a>
+        </li>
+        <li>
+          Icons made by
+          <a class="ah-link"
+             href="https://www.flaticon.com/authors/pixel-perfect"
+             title="Pixel perfect"
+             target="_blank">Pixel perfect</a>
+          from
+          <a class="ah-link"
+             href="https://www.flaticon.com/"
+             title="Flaticon"
+             target="_blank">www.flaticon.com</a>
         </li>
       </ul>
     </div>

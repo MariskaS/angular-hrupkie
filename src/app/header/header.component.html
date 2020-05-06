@@ -5,7 +5,7 @@
       <li class="ah-logo">
         <ng-container *ngIf="isDonateStep; else donateLogo">
           <a href="#"
-             (click)="showDonate()">{{headerText.logo}}</a>
+             (click)="toggleDonateForm()">{{headerText.logo}}</a>
         </ng-container>
       </li>
       <li>
@@ -15,7 +15,7 @@
       </li>
       <li *ngIf="!isDonateStep">
         <a class="ah-btn--secondary"
-           (click)="showDonate()"
+           (click)="toggleDonateForm()"
            href="#">
           {{headerText.helpButton}}
         </a>

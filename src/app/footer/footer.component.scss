@@ -7,6 +7,13 @@
   font-size: $footer-font-size;
   font-family: $footer-font;
   padding: $footer-space;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      padding: $footer-space-sm;
+    }
+  }
 }
 
 .ah-link {
@@ -24,14 +31,13 @@ a {
 
   a {
     padding: $space-base-half;
+  }
 
-    &:active {
-      transition: color $transition-base;
-
-      &:hover {
-        color: $color-red-light;
-      }
-    }
+  // Socials SVG.
+  &__svg {
+    display: block;
+    fill: $ico-soc-color;
+    width: $ico-soc-size;
 
     // If the device has :hover.
     @media (hover: hover) {
@@ -39,7 +45,7 @@ a {
         transition: color $transition-base;
 
         &:hover {
-          color: $color-red-light;
+          fill: $color-red-light;
         }
       }
     }
@@ -55,16 +61,21 @@ a {
 
 // Contacts Block.
 .ah-contacts {
-  flex-wrap: wrap;
-  display: flex;
-  align-items: center;
-  margin: -$space-base;
-
   &__item {
-    padding: $space-base;
-
     li:not(:last-child) {
       margin-bottom: $space-small;
+    }
+  }
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      display: flex;
+      align-items: center;
+
+      &__item:not(:last-child) {
+        padding-right: $space-base;
+      }
     }
   }
 }

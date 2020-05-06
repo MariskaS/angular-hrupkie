@@ -14,7 +14,14 @@ $info-width: 420px;
 .ah-donation {
   &__info,
   &__content {
-    padding: $space-base-double;
+    padding: $space-base-double $space-base;
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sm) {
+      & {
+        padding: $space-base-double;
+      }
+    }
   }
 
   &__info {

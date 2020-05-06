@@ -1,5 +1,3 @@
-@import "../mixins/mixin-hint-variant";
-
 @mixin input-validate($text-color, $border-color) {
   &--invalid {
     color: $text-color;

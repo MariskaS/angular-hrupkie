@@ -1,27 +1,18 @@
-@import "../../styles/icons";
-@import "../../styles/override/override-swiper";
+@import "../../styles/variables/variable";
+@import "../../styles/mixins/mixin-flex";
+@import "../../styles/swiper";
 
 :host {
   display: block;
-  padding: $space-base;
   overflow: hidden;
-
   // Stretch the block to the full height of the browser window.
   flex: 1;
 }
 
 .ah-h1 {
-  margin-bottom: $space-base;
   position: relative;
   user-select: none;
   z-index: $z-index-swiper-text;
-
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sm) {
-    & {
-      margin-bottom: 0;
-    }
-  }
 }
 
 /*
@@ -29,39 +20,56 @@
 */
 .anim-girl-wrapper {
   position: relative;
+  margin: 0 auto;
+  width: 40vmin;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    margin: 0;
+    width: 60vmin;
+  }
 }
 
 .ah-anim-flowers {
   position: absolute;
   top: 0;
-  left: 0;
+  height: auto;
+  width: 125%;
+  bottom: 2%;
+  left: -10%;
 }
 
 // Animate Step-0.
 .ah-swiper__step-0 {
-
-  .ah-anim-girl,
   .ah-anim-flowers {
     transition: 0.6s ease-in-out;
-  }
-
-  .ah-anim-girl {
-    transform: translateY(-200%);
-  }
-
-  .ah-anim-flowers {
     transform: translateY(200%);
   }
 
   // Is Active Step.
   &.swiper-slide-active {
-
-    .ah-anim-girl,
     .ah-anim-flowers {
       transform: translateY(0%);
     }
   }
 }
+
+// Button for showing form.
+.ah-btn-show-form {
+  display: none;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    display: block;
+    position: absolute;
+    bottom: $space-base;
+    width: $swiper-btn-size;
+    transform: rotate(90deg);
+    cursor: pointer;
+    z-index: $z-index-swiper-btn;
+  }
+}
+
 
 // Animate for all Steps.
 .ah-anim-text {
@@ -75,11 +83,14 @@
   right: 0;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  height: 100%;
+  width: 100%;
 }
 
 .swiper-slide-active {
-  .ah-anim-gap,
-  .ah-anim-text {
+  .ah-anim-text,
+  .ah-anim-gap {
     opacity: 1;
   }
 }
+
