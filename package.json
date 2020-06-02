@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run angular-hrupkie:serve-ssr",
     "serve:ssr": "node dist/angular-hrupkie/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-hrupkie:production",
+    "build:ssr": "ng build --prod && ng run angular-hrupkie:server:production",
     "prerender": "ng run angular-hrupkie:prerender"
   },
   "private": true,
