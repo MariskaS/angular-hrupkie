@@ -1,10 +1,8 @@
 <div class="ah-donation">
-  <div class="ah-donation__info">
-    <ul>
+    <ul class="ah-donation__info">
       <li>{{donationText.title}}</li>
       <li>{{donationText.subtitle}}</li>
     </ul>
-  </div>
 
   <div class="ah-donation__content">
     <app-donation-form *ngIf="!isSuccessfulPayment"
@@ -13,3 +11,4 @@
     <app-donation-check *ngIf="isSuccessfulPayment" (showForm)="showForm($event)"></app-donation-check>
   </div>
 </div>
+<app-footer></app-footer>

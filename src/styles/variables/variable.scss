@@ -1,8 +1,8 @@
-@import "variable-theme";
-
-$font-form-h4: 21px;
-$font-form-big: 26px;
 $font-form-h2: 36px;
+$font-form-h3: 26px;
+$font-form-h4: 21px;
+
+$font-hash: 21px;
 
 $font-h1-response: 4rem;
 
@@ -29,7 +29,7 @@ $screen-lg: 1220px;
 // Buttons.
 $btn-spaces-big: 2px 32px;
 $btn-size-big: 60px;
-$btn-font-big: $font-form-big;
+$btn-font-big: $font-form-h3;
 
 $btn-spaces: 2px 20px;
 $btn-size: 40px;
@@ -58,9 +58,9 @@ $input-height-base: 40px;
 
 $input-with-icon-height: $radio-height;
 $input-with-icon-width: $radio-width;
-$input-with-icon-font-size: $font-form-big;
+$input-with-icon-font-size: $font-form-h3;
 $input-with-icon-space: $space-small 0 $space-small $space-base;
-$input-with-icon-bg: $color-white;
+$input-with-icon-bg: var(--color-white);
 
 // Animation.
 $transition-base: 270ms ease-in-out;
@@ -72,23 +72,26 @@ $header-space: $space-base $space-base-double;
 $footer-font-size: 14px;
 $footer-font: $font-roboto-reg;
 // $space-base-double*2 - because socials network plugin on mobile.
-$footer-space: $space-base-double $space-base $space-base-double*2;
+$footer-space: $space-base-double $space-base $space-base-double;
 $footer-space-sm: $space-base-double;
 
 // Swiper.
-$swiper-btn-size: 40px;
-$swiper-btn-space: $space-base-double;
+$swiper-bullet-space: 6px;
 
 // Icons.
 $ico-rub-size: 20px;
 $ico-rub-space: 0 $space-base 0 $space-base-half;
 
-$ico-soc-color: $color-white;
-$ico-soc-color-action: $color-red-light;
+$ico-soc-color: var(--color-white);
+$ico-soc-color-action: var(--color-red-light);
 $ico-soc-size: 14px;
 
 // Notify.
 $notify-title-font: $font-form-h2;
 $notify-subtitle-font: $font-form-h4;
+
+// Scrollbar.
+$scrollbar-size: 6px;
+
 
 

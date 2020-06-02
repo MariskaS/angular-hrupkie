@@ -20,12 +20,12 @@
     // Checked.
     &:checked + label {
       &:before {
-        background-color: $color-primary;
-        border-color: $color-primary;
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
       }
 
       &:after {
-        border-color: $color-white;
+        border-color: var(--color-white);
       }
     }
   }
@@ -36,7 +36,7 @@
     cursor: pointer;
     font-size: $font-small;
     font-family: $font-roboto-reg;
-    color: $color-grey;
+    color: var(--color-grey);
 
     &:before {
       content: '';
@@ -46,7 +46,7 @@
       width: $checkbox-size;
       height: $checkbox-size;
       background-color: transparent;
-      border: $border-control-grey;
+      border: var(--border-control-grey);
       z-index: 1;
 
       // If the device has :hover.

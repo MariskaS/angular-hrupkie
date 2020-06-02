@@ -1,7 +1,0 @@
-@import "mixin-button-size";
-@import "mixin-button-variant";
-
-.ah-btn--secondary {
-  @include button-size($btn-size, $btn-spaces, $btn-font);
-  @include button-variant($color-red-light, darken($color-red-light, 10), $color-white)
-}

@@ -3,5 +3,5 @@
 
 .ah-btn--primary {
   @include button-size($btn-size-big, $btn-spaces-big, $btn-font-big);
-  @include button-variant($color-primary, $color-primary-dark, $color-white)
+  @include button-variant(var(--color-primary), var(--color-primary-dark), var(--color-white))
 }

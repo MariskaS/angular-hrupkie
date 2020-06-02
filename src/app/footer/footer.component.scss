@@ -1,9 +1,12 @@
-@import "../../styles/mixins/mixin-link-variant";
-@import "../../styles/mixins/mixin-flex";
+@import "~src/styles/mixins/mixin-link-variant";
+@import "~src/styles/mixins/mixin-flex";
+@import "~src/styles/mixins/mixin-container";
+
+$color-link: #fff;
 
 .ah-footer {
-  background-color: $footer-bg;
-  color: $footer-color;
+  background-color: var(--footer-bg);
+  color: var(--footer-color);
   font-size: $footer-font-size;
   font-family: $footer-font;
   padding: $footer-space;
@@ -17,11 +20,11 @@
 }
 
 .ah-link {
-  @include link-variant($color-white);
+  @include link-variant($color-link);
 }
 
 a {
-  color: $footer-color;
+  color: var(--footer-color);
 }
 
 // Socials Block.
@@ -45,7 +48,7 @@ a {
         transition: color $transition-base;
 
         &:hover {
-          fill: $color-red-light;
+          fill: var(--color-red-light);
         }
       }
     }
@@ -61,6 +64,8 @@ a {
 
 // Contacts Block.
 .ah-contacts {
+  @include container($screen-md);
+
   &__item {
     li:not(:last-child) {
       margin-bottom: $space-small;

@@ -1,8 +1,45 @@
-<app-header (donateStep)="toggleDonateForm($event)"
-            [isDonateStep]="isDonateStep"></app-header>
-<app-slider *ngIf="!isDonateStep"
-            (donateStep)="toggleDonateForm($event)"></app-slider>
-<ng-container *ngIf="isDonateStep">
-  <app-donation></app-donation>
-  <app-footer></app-footer>
-</ng-container>
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"
+         *ngFor="let slide of slideData; let i = index">
+      <div class="ah-girl">
+        <div class="ah-girl__title"
+             data-swiper-parallax="-400">
+          <a href="/"
+             class="ah-hash">{{headerText.logo}}</a>
+          <div [innerHTML]="slide.title"
+               class="ah-h1"></div>
+        </div>
+        <div class="ah-girl__preview">
+          <svg-icon [stretch]="true"
+                    src="assets/icons/icon-girl.svg"
+                    data-swiper-parallax="500"
+                    class="ah-anim-girl"></svg-icon>
+          <svg-icon src="assets/icons/icon-flowers.svg"
+                    data-swiper-parallax="-500"
+                    class="ah-svg-flowers"></svg-icon>
+        </div>
+      </div>
+      <svg-icon *ngIf="i === 1"
+                src="assets/icons/icon-fr_1.svg"
+                data-swiper-parallax="300" data-swiper-parallax-opacity="0"
+                class="ah-svg-gap"></svg-icon>
+      <svg-icon *ngIf="i === 2"
+                src="assets/icons/icon-fr_2.svg"
+                data-swiper-parallax="300" data-swiper-parallax-opacity="0"
+                class="ah-svg-gap"></svg-icon>
+
+      <ng-container *ngIf="i === 3">
+        <svg-icon src="assets/icons/icon-fr_3.svg"
+                  data-swiper-parallax="300" data-swiper-parallax-opacity="0"
+                  class="ah-svg-gap"></svg-icon>
+      </ng-container>
+    </div>
+    <div class="swiper-slide">
+      <app-donation></app-donation>
+    </div>
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</swiper>

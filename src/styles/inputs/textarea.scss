@@ -5,7 +5,7 @@
 * </div>
 */
 .ah-textarea {
-  @include input($input-height-base, $border-control-grey, $color-primary, $color-primary);
+  @include input($input-height-base, var(--border-control-grey), var(--color-primary), var(--color-primary));
 
   textarea {
     min-height: $input-height-base;

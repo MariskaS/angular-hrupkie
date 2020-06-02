@@ -1,28 +1,32 @@
-$color-peach: #f1e2d2;
+:root {
+  --color-primary: #0d62b1;
+  --color-primary-dark: #042c52;
 
-$color-primary: #0d62b1;
-$color-primary-dark: #042c52;
+  --color-peach: #f1e2d2;
+  --color-base: var(--color-primary-dark);
 
-$color-base: $color-primary-dark;
+  --color-grey: #949494;
+  --color-grey-light: #c6ced3;
 
-$color-grey-light: #c6ced3;
-$color-grey: #949494;
+  --color-white: #ffffff;
+  --color-black: #222222;
 
-$color-white: #ffffff;
-$color-black: #222222;
+  --color-red: #e12b2b;
+  --color-red-light: #f65b47;
 
-$color-red: #e12b2b;
-$color-red-light: #f65b47;
+  // Controls (Use in inputs).
+  --border-control-grey: solid 1px var(--color-grey-light);
 
-// Controls (Use in inputs).
-$border-control-grey: solid 1px $color-grey-light;
+  // Swiper.
+  --swiper-theme-color: var(--color-primary);
 
-// Header.
-$header-bg: $color-primary;
-$header-color: $color-white;
+  // Footer.
+  --footer-bg: var(--color-primary);
+  --footer-color: var(--color-white);
 
-// Footer.
-$footer-bg: $color-primary;
-$footer-color: $color-white;
+  // Scrollbar.
+  --color-scrollbar: var(--color-primary);
+}
+
 
 

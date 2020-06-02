@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 import {default as DonationText} from "../constants/donationText.json";
+import {default as FooterText} from "../constants/footerText.json";
 
 @Component({
   selector: 'app-donation',

@@ -1,23 +1,28 @@
 @import "mixins/mixin-response-font";
 
 a {
-  color: $color-primary;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
+.ah-hash,
 .ah-h1,
 .ah-h4 {
   font-family: $font-akrobat-bold;
   text-transform: uppercase;
 }
 
+.ah-hash,
 .ah-h1 {
-  color: $color-primary-dark;
+  color: var(--color-primary-dark);
+}
+
+.ah-h1 {
   @include response-font($font-h1-response);
 }
 
 .ah-h4 {
   font-size: $font-base;
-  color: $color-black;
+  color: var(--color-black);
 }
 

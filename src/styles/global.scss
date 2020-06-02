@@ -1,13 +1,22 @@
+::-webkit-scrollbar {
+  width: $scrollbar-size;
+  height: $scrollbar-size;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 body {
   font-family: $font-akrobat-reg;
   font-size: $font-base;
-  color: $color-base;
+  color: var(--color-base);
   overflow-x: hidden;
   line-height: 1.1;
-  background-color: $color-peach;
-}
-
-.ah-container {
-  max-width: $screen-lg;
-  margin: 0 auto;
+  background-color: var(--color-peach);
+  display: flex;
 }

@@ -1,6 +1,77 @@
+@import "~src/styles/variables/variable";
+@import "~src/styles/mixins/mixin-flex";
+
 :host {
   // Stretch the block to the full height of the browser window.
+  flex: 1;
+  overflow: hidden;
+}
+
+/*
+* Slider.
+*/
+swiper {
+  height: 100% !important;
+}
+
+.swiper-pagination {
+  &-bullets {
+    left: $swiper-bullet-space;
+    right: unset;
+  }
+}
+
+.ah-girl {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
+
+  &__title {
+    text-align: center;
+    position: relative;
+    user-select: none;
+    z-index: $z-index-swiper-text;
+
+    .ah-hash {
+      font-size: $font-hash;
+      margin-top: $space-base;
+      white-space: nowrap;
+    }
+
+    .ah-h1 {
+      margin: $space-base 0 $space-base-double;
+    }
+  }
+
+  &__preview {
+    position: relative;
+    margin: 0 auto;
+    width: 70vmin;
+  }
+
+}
+
+.ah-svg-flowers {
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 125%;
+  bottom: 2%;
+  left: -10%;
+}
+
+.ah-svg-gap {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 140%;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    width: 1600px;
+    height: 896px
+  }
 }

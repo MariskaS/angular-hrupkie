@@ -1,57 +1,62 @@
 <footer class="ah-footer">
-  <div class="ah-container">
-    <div class="ah-contacts">
-      <ul class="ah-contacts__item">
-        <li>
-          <a class="ah-link"
-             href="tel:{{footerText.contacts.phone}}"
-             rel="nofollow">{{footerText.contacts.phone}}</a></li>
-        <li>
-          <a class="ah-link"
-             href="mailto:{{footerText.contacts.email}}?subject=Mail from {{footerText.contacts.mainSite}}">{{footerText.contacts.email}}</a></li>
-        <li>
-          <div class="ah-soc">
-            <a *ngFor="let item of socials"
-               target="_blank"
-               href="{{item.link}}">
-              <svg-icon src="assets/icons/icon-{{item.icon}}.svg"
-                        class="ah-soc__svg"></svg-icon>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <ul class="ah-contacts__item">
-        <li>{{footerText.addresses.legal}}</li>
-        <li>{{footerText.addresses.physical}}</li>
-        <li>{{footerText.addresses.mailing}}</li>
-        <li class="ah-thanks">{{footerText.thanks.title}}</li>
-        <li>
-          <a class="ah-link"
+  <div class="ah-contacts">
+    <ul class="ah-contacts__item">
+      <li>
+        <a class="ah-link"
+           href="https://hrupkie.ru/">
+          {{footerText.contacts.directToMainSite}}</a>
+      </li>
+      <li>
+        <a class="ah-link"
+           href="tel:{{footerText.contacts.phone}}"
+           rel="nofollow">{{footerText.contacts.phone}}</a>
+      </li>
+      <li>
+        <a class="ah-link"
+           href="mailto:{{footerText.contacts.email}}?subject=Mail from {{footerText.contacts.mainSite}}">{{footerText.contacts.email}}</a>
+      </li>
+      <li>
+        <div class="ah-soc">
+          <a *ngFor="let item of socials"
              target="_blank"
-             href="https://primaxdigital.ru/">primaxdigital.ru</a>&nbsp;
-          <a class="ah-link"
-             target="_blank"
-             href="https://buroburo.ru/">buroburo.ru</a>&nbsp;
-          <a class="ah-link"
-             target="_blank"
-             href="https://www.linkedin.com/in/marina-ismailova-b281958a/">mariskaS</a>&nbsp;
-          <a class="ah-link"
-             target="_blank"
-             href="https://vk.com/serednitsky.nick">serednitskyNick</a>
-        </li>
-        <li>
-          Icons made by
-          <a class="ah-link"
-             href="https://www.flaticon.com/authors/pixel-perfect"
-             title="Pixel perfect"
-             target="_blank">Pixel perfect</a>
-          from
-          <a class="ah-link"
-             href="https://www.flaticon.com/"
-             title="Flaticon"
-             target="_blank">www.flaticon.com</a>
-        </li>
-      </ul>
-    </div>
+             href="{{item.link}}">
+            <svg-icon src="assets/icons/icon-{{item.icon}}.svg"
+                      class="ah-soc__svg"></svg-icon>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <ul class="ah-contacts__item">
+      <li>{{footerText.addresses.legal}}</li>
+      <li>{{footerText.addresses.physical}}</li>
+      <li>{{footerText.addresses.mailing}}</li>
+      <li class="ah-thanks">{{footerText.thanks.title}}</li>
+      <li>
+        <a class="ah-link"
+           target="_blank"
+           href="https://primaxdigital.ru/">primaxdigital.ru</a>&nbsp;
+        <a class="ah-link"
+           target="_blank"
+           href="https://buroburo.ru/">buroburo.ru</a>&nbsp;
+        <a class="ah-link"
+           target="_blank"
+           href="https://www.linkedin.com/in/marina-ismailova-b281958a/">mariskaS</a>&nbsp;
+        <a class="ah-link"
+           target="_blank"
+           href="https://vk.com/serednitsky.nick">serednitskyNick</a>
+      </li>
+      <li>
+        Icons made by
+        <a class="ah-link"
+           href="https://www.flaticon.com/authors/pixel-perfect"
+           title="Pixel perfect"
+           target="_blank">Pixel perfect</a>
+        from
+        <a class="ah-link"
+           href="https://www.flaticon.com/"
+           title="Flaticon"
+           target="_blank">www.flaticon.com</a>
+      </li>
+    </ul>
   </div>
 </footer>

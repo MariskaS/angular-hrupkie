@@ -2,7 +2,8 @@
   "contacts": {
     "phone": "+7-903-590-04-00",
     "email": "info@hrupkie.ru",
-    "mainSite": "help.hrupkie"
+    "mainSite": "help.hrupkie",
+    "directToMainSite": "Перейти на основной сайт"
   },
   "addresses": {
     "legal": "Юридический адрес: 127051, г. Москва, Цветной Бульвар, д. 2",

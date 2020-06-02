@@ -31,7 +31,7 @@
 
 
   &:disabled {
-    background: $color-grey;
+    background: var(--color-grey);
     cursor: default;
   }
 }
