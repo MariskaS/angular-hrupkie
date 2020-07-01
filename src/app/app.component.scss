@@ -47,7 +47,12 @@ swiper {
   &__preview {
     position: relative;
     margin: 0 auto;
-    width: 70vmin;
+    width: 68vmin;
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sm) {
+      width: 58vmin;
+    }
   }
 
 }

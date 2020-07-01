@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 import {default as DonationText} from "../../constants/donationText.json";
 
@@ -7,15 +7,10 @@ import {default as DonationText} from "../../constants/donationText.json";
   templateUrl: './donation-check.component.html',
   styleUrls: ['./donation-check.component.scss']
 })
-export class DonationCheckComponent implements OnInit {
+export class DonationCheckComponent {
   @Output() showForm = new EventEmitter<boolean>();
 
   donationText = DonationText;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   showDonateForm():void {
     this.showForm.emit(false);
